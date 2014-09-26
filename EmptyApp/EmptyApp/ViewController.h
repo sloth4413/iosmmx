@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController
 
+@property(nonatomic,strong,readonly) UILabel *titleContent;
 
+-(void)setTitleString:(NSString*)title;
 @end
 

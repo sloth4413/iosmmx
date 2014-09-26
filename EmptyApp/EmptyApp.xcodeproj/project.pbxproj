@@ -14,6 +14,8 @@
 		D7BEE0951BB6D4BD00206475 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7BEE0941BB6D4BD00206475 /* Images.xcassets */; };
 		D7BEE0981BB6D4BD00206475 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7BEE0961BB6D4BD00206475 /* LaunchScreen.xib */; };
 		D7BEE0A41BB6D4BD00206475 /* EmptyAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BEE0A31BB6D4BD00206475 /* EmptyAppTests.m */; };
+		D7BEE0B01BB6D4BD00206475 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BEE0AF1BB6D4BD00206475 /* Reveal.framework */; };
+		D7BEE0B21BB6D4BD00206475 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BEE0B11BB6D4BD00206475 /* libz.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		D7BEE09D1BB6D4BD00206475 /* EmptyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmptyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7BEE0A21BB6D4BD00206475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7BEE0A31BB6D4BD00206475 /* EmptyAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmptyAppTests.m; sourceTree = "<group>"; };
+		D7BEE0AF1BB6D4BD00206475 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		D7BEE0B11BB6D4BD00206475 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		D7BEE0B31BB6D4BD00206475 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7BEE0B21BB6D4BD00206475 /* libz.dylib in Frameworks */,
+				D7BEE0B01BB6D4BD00206475 /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +70,7 @@
 		D7BEE07B1BB6D4BD00206475 = {
 			isa = PBXGroup;
 			children = (
+				D7BEE0AE1BB6D4BD00206475 /* Framework */,
 				D7BEE0861BB6D4BD00206475 /* EmptyApp */,
 				D7BEE0A01BB6D4BD00206475 /* EmptyAppTests */,
 				D7BEE0851BB6D4BD00206475 /* Products */,
@@ -81,6 +89,7 @@
 		D7BEE0861BB6D4BD00206475 /* EmptyApp */ = {
 			isa = PBXGroup;
 			children = (
+				D7BEE0B31BB6D4BD00206475 /* Header.h */,
 				D7BEE08B1BB6D4BD00206475 /* AppDelegate.h */,
 				D7BEE08C1BB6D4BD00206475 /* AppDelegate.m */,
 				D7BEE08E1BB6D4BD00206475 /* ViewController.h */,
@@ -117,6 +126,15 @@
 				D7BEE0A21BB6D4BD00206475 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D7BEE0AE1BB6D4BD00206475 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				D7BEE0B11BB6D4BD00206475 /* libz.dylib */,
+				D7BEE0AF1BB6D4BD00206475 /* Reveal.framework */,
+			);
+			name = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,8 +365,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = EmptyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -357,8 +384,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = EmptyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
