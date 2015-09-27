@@ -14,6 +14,7 @@
 		D75D8F9A1BB825DB00E56EF7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D75D8F991BB825DB00E56EF7 /* Images.xcassets */; };
 		D75D8F9D1BB825DB00E56EF7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D75D8F9B1BB825DB00E56EF7 /* LaunchScreen.xib */; };
 		D75D8FA91BB825DB00E56EF7 /* ImageDrawDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D75D8FA81BB825DB00E56EF7 /* ImageDrawDemoTests.m */; };
+		D75D8FB41BB8268200E56EF7 /* big.png in Resources */ = {isa = PBXBuildFile; fileRef = D75D8FB31BB8268200E56EF7 /* big.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		D75D8FA21BB825DB00E56EF7 /* ImageDrawDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageDrawDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75D8FA71BB825DB00E56EF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D75D8FA81BB825DB00E56EF7 /* ImageDrawDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageDrawDemoTests.m; sourceTree = "<group>"; };
+		D75D8FB31BB8268200E56EF7 /* big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = big.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		D75D8F8B1BB825DB00E56EF7 /* ImageDrawDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D75D8FB21BB8267100E56EF7 /* Resources */,
 				D75D8F901BB825DB00E56EF7 /* AppDelegate.h */,
 				D75D8F911BB825DB00E56EF7 /* AppDelegate.m */,
 				D75D8F931BB825DB00E56EF7 /* ViewController.h */,
@@ -117,6 +120,14 @@
 				D75D8FA71BB825DB00E56EF7 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D75D8FB21BB8267100E56EF7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D75D8FB31BB8268200E56EF7 /* big.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D75D8FB41BB8268200E56EF7 /* big.png in Resources */,
 				D75D8F981BB825DB00E56EF7 /* Main.storyboard in Resources */,
 				D75D8F9D1BB825DB00E56EF7 /* LaunchScreen.xib in Resources */,
 				D75D8F9A1BB825DB00E56EF7 /* Images.xcassets in Resources */,
