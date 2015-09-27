@@ -14,6 +14,7 @@
 		D7DA8D5D1BB814410083DDD1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7DA8D5C1BB814410083DDD1 /* Images.xcassets */; };
 		D7DA8D601BB814410083DDD1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7DA8D5E1BB814410083DDD1 /* LaunchScreen.xib */; };
 		D7DA8D6C1BB814410083DDD1 /* TransformDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DA8D6B1BB814410083DDD1 /* TransformDemoTests.m */; };
+		D7DA8D771BB81BF50083DDD1 /* horse.png in Resources */ = {isa = PBXBuildFile; fileRef = D7DA8D761BB81BF50083DDD1 /* horse.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		D7DA8D651BB814410083DDD1 /* TransformDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransformDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DA8D6A1BB814410083DDD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7DA8D6B1BB814410083DDD1 /* TransformDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransformDemoTests.m; sourceTree = "<group>"; };
+		D7DA8D761BB81BF50083DDD1 /* horse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = horse.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		D7DA8D4E1BB814410083DDD1 /* TransformDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D7DA8D751BB81BE50083DDD1 /* Resource */,
 				D7DA8D531BB814410083DDD1 /* AppDelegate.h */,
 				D7DA8D541BB814410083DDD1 /* AppDelegate.m */,
 				D7DA8D561BB814410083DDD1 /* ViewController.h */,
@@ -117,6 +120,14 @@
 				D7DA8D6A1BB814410083DDD1 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D7DA8D751BB81BE50083DDD1 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				D7DA8D761BB81BF50083DDD1 /* horse.png */,
+			);
+			name = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7DA8D771BB81BF50083DDD1 /* horse.png in Resources */,
 				D7DA8D5B1BB814410083DDD1 /* Main.storyboard in Resources */,
 				D7DA8D601BB814410083DDD1 /* LaunchScreen.xib in Resources */,
 				D7DA8D5D1BB814410083DDD1 /* Images.xcassets in Resources */,
